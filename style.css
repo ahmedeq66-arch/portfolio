@@ -72,33 +72,6 @@ body {
     color: var(--secondary-color);
 }
 
-
-/* Desktop links */
-.nav-links {
-    display: flex;
-    gap: 18px;
-}
-
-/* Mobile styles */
-@media (max-width: 600px) {
-    .nav-toggle {
-        display: block; /* show hamburger */
-    }
-
-    .nav-links {
-        display: flex;
-        flex-direction: column;
-        max-height: 0; /* مخفية بالكامل */
-        overflow: hidden;
-        transition: max-height 0.4s ease-in-out;
-        background: #fff;
-        width: 100%;
-        gap: 0;
-        margin-top: 8px;
-        border-top: 1px solid #ccc;
-    }
-
-
 /* Header */
 header {
     padding-top: 70px;
@@ -552,6 +525,40 @@ section hr {
     .header-img img {
         max-width: 250px;
     }
+    /* Hamburger button */
+.menu-toggle {
+    display: none;
+    font-size: 26px;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 20px 0;
+        display: none;  /* hide links */
+        border-bottom: 1px solid #eee;
+    }
+
+    .nav-links.active {
+        display: flex; /* show when active */
+    }
+}
+
 }
 
 /* Extra small devices */
@@ -560,11 +567,6 @@ section hr {
         font-size: 28px;
     }
     .skills-box, .services-box, .portfolio-box {
-        width: 100%;
-    }
+        width: 100%;
+    }
 }
-
-
-
-
-
