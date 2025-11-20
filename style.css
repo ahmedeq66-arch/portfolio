@@ -462,4 +462,77 @@ section hr {
     .portfolio-box {
         width: 100%;
     }
+
+}
+
+/* Responsive CSS */
+
+/* Tablets and below */
+@media (max-width:900px) {
+    .header-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 20px 0;
+    }
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .header-img img {
+        margin: 20px auto 0;
+        max-width: 300px;
+    }
+    .nav-links {
+        gap: 12px;
+    }
+    .skills-box, .services-box, .portfolio-container {
+        justify-content: center;
+    }
+}
+
+/* Mobile devices */
+@media (max-width:600px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        width: 100%;
+    }
+    .content-text h1 {
+        font-size: 34px;
+    }
+    .title {
+        font-size: 16px;
+    }
+    section {
+        padding: 60px 20px;
+    }
+    .skill, .service, .portfolio-box {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .contact-form {
+        width: 100%;
+        gap: 12px;
+    }
+    #contact h2 {
+        font-size: 28px;
+    }
+    #footer .copyright {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+    .header-img img {
+        max-width: 250px;
+    }
+}
+
+/* Extra small devices */
+@media (max-width:400px) {
+    .content-text h1 {
+        font-size: 28px;
+    }
+    .skills-box, .services-box, .portfolio-box {
+        width: 100%;
+    }
 }
