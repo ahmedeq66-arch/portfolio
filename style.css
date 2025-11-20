@@ -71,7 +71,60 @@ body {
 .nav-links a:hover {
     color: var(--secondary-color);
 }
+/* Hide the checkbox */
+.nav-toggle-checkbox {
+    display: none;
+}
 
+/* Hamburger icon */
+.nav-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+/* Desktop links */
+.nav-links {
+    display: flex;
+    gap: 18px;
+}
+
+/* Mobile styles */
+@media (max-width: 600px) {
+    .nav-toggle {
+        display: block; /* show hamburger */
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        max-height: 0; /* مخفية بالكامل */
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out;
+        background: #fff;
+        width: 100%;
+        gap: 0;
+        margin-top: 8px;
+        border-top: 1px solid #ccc;
+    }
+
+    /* Show links when checkbox is checked */
+    .nav-toggle-checkbox:checked ~ .nav-links {
+        max-height: 500px; /* يكفي ظهور كل العناصر */
+        padding: 12px 0;
+        gap: 10px;
+    }
+
+    .nav-links li {
+        padding: 8px 20px;
+        border-bottom: 1px solid #e6e6e6;
+    }
+
+    .nav-links li:last-child {
+        border-bottom: none;
+    }
+}
 
 /* Header */
 header {
@@ -537,5 +590,6 @@ section hr {
         width: 100%;
     }
 }
+
 
 
