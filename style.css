@@ -71,18 +71,7 @@ body {
 .nav-links a:hover {
     color: var(--secondary-color);
 }
-/* Hide the checkbox */
-.nav-toggle-checkbox {
-    display: none;
-}
 
-/* Hamburger icon */
-.nav-toggle {
-    display: none;
-    font-size: 28px;
-    cursor: pointer;
-    color: var(--primary-color);
-}
 
 /* Desktop links */
 .nav-links {
@@ -590,6 +579,7 @@ section hr {
         width: 100%;
     }
 }
+
 
 
 
